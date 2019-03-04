@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>今日菜单</title>
+</head>
+<body>
+
+    <!--导航栏-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" class="logo"/></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            菜单信息
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">今日菜单</a></li>
+                            <li class="divider"></li>
+                            <li><a href="weekMenu.html">本周菜单</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cart.html">购物车</a></li>
+                    <li><a href="order.html">我的订单</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            其他信息
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">公告栏</a></li>
+                            <li class="divider"></li>
+                            <li><a href="refundRule.html">订/退餐条例</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">意见反馈</a></li>
+                        </ul>
+                    </li>
+                    <li><div style="width: 465px">&nbsp;</div></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END 导航栏-->
+    <div class="container">
+        <div class="col-md-4">
+            <!--套餐图片-->
+            <img src="images/food/foodsmall1.jpg" alt="" width="300px">
+        </div>
+        <div class="col-md-8">
+            <!--套餐内容-->
+            <div id="todayMenu">
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="9">今日菜单  时间: 2018-5-12 周六</th>
+                    </tr>
+                    <tr>
+                        <th>时段</th>
+                        <th>价格</th>
+                        <th>主荤</th>
+                        <th>配荤</th>
+                        <th>素菜</th>
+                        <th>配荤</th>
+                        <th>水果/饮品</th>
+                        <th>备注</th>
+                    </tr>
+                    <!--午餐-->
+                    <tr>
+                        <td rowspan=2>午餐</td>
+                        <td>15元</td>
+                        <td rowspan=2>回锅牛肉</td>
+                        <td rowspan=2>豆角肉丝</td>
+                        <td rowspan=2>香拌土豆丝</td>
+                        <td></td>
+                        <td rowspan=2>橙汁</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18元</td>
+                        <td>牙签肉</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="detail">
+                说法一
+                由清朝山东巡抚、四川总督丁宝桢所创，他对烹饪颇有研究，喜欢吃鸡和花生米，并尤其喜好辣味。他在山东为官时曾命家厨改良鲁菜“酱爆鸡丁”为辣炒，后来在四川总督任上的时候将此菜推广开来，创制了一道将鸡丁、红辣椒、花生米下锅爆炒而成的美味佳肴。这道美味本来是丁家的私房菜，但后来尽人皆知，成为了人们熟知的宫保鸡丁。所谓“宫保”，其实是丁宝桢的荣誉官衔，丁宝桢治蜀十年，为官刚正不阿，多有建树，于光绪十一年死在任上，清廷为了表彰他的功绩，追赠“太子太保”。如上文所说，“太子太保”是“宫保”之一，于是，为了纪念丁宝桢，他发明的这道菜由此得名“宫保鸡丁”。由于这道菜流传太广，在各地有很多不同的做法，甚至还出现了将鸡丁演变为肉丁的“宫保肉丁”。宫保鸡丁传到西方后，西方人还根据自己的口味进行了一些改良，使之成为了符合西方口味的“西式宫保鸡丁” [5]  。
+                说法二
+                一日，丁宝桢身着微服带一家仆去山东济南大明湖一带私访。天近中午，已觉腹饥，突然闻到一股子香味从附近一农家院中飘出，于是信步走进院中。只见一中年汉子正在灶房内炒菜。喜爱烹调的丁宫保连忙走上前问汉子炒的是何菜，汉子答道：“爆炒鸡丁”。汉子热情地让丁宝桢品尝一下，丁宝桢毫不客气地尝了一口，味道十分鲜美，连忙又问道：“既为鸡丁，为何却这般鲜嫩？”汉子答道：“此乃取当地笨鸡鸡脯肉切丁，而外薄裹淀粉糊（即是水淀粉），以利于快熟且可防味泄，再配以花生、胡椒，加上白糖、盐、酱油、南酒、葱、姜、蒜等调料，经旺火爆炒而成。成品色泽红亮，鸡丁细嫩，花生米酥脆，咸鲜香辣，佐酒下饭均宜。”丁宝桢抚须点头，找出盘中一花生入口里，细细咂摸，果真是别有滋味。这道菜令丁宝桢回味悠长，走时百般不舍，他记准了地方，回府不久就遣人重金把汉子聘为家厨。每每远客到，必用此道菜为压轴菜招待客人，百吃不厌世称美味。后来，丁宝桢奉调任四川总督，临行征求汉子意见，汉子感其恩重，遂携家眷一起随丁宝桢进川，进而把爆炒鸡丁带到了四川，他的后人通过把胡椒换成辣椒，做出了川味的宫保鸡丁。丁宝桢去世后不久，宫保鸡丁就被四川当地官员作为贡菜献给皇帝，发展成为御用的名菜之一 [6]  。
+
+
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+
+    <!--Start 底部-->
+    <div class="footer">
+<div class="panel-footer">
+    <ul>
+        <li>学校入驻</li>
+        <li>配送加盟</li>
+        <li>城市代理</li>
+    </ul>
+    <ul>
+        <li>关于水高</li>
+        <li>媒体报道</li>
+        <li>平台制度</li>
+    </ul>
+    <ul>
+        <li>常见问题</li>
+        <li>用户反馈</li>
+        <li>诚信举报</li>
+    </ul>
+    <div class="contactMe">
+        <font size="5px"><b>1010-9777</b></font> <br/><br>
+        周一至周日 9:00-23:00 <br/>
+        客服不受理商务合作 <br/>
+    </div>
+    <div class="contactMe">
+
+        <img src="images/QR-code.png" alt="" width="80px" style="position: relative;top: -20px;"/>
+        <div style="font-size: 14px;display: inline-block">
+            <b>关注公众号</b>
+            <br><br>
+            更多折扣，更多优惠
+        </div>
+    </div>
+</div>
+<div class="beian">
+    ©2015 shuigao.com 京ICP证070791号 京公网安备11010502025545号
+</div>
+    </div>
+<!--End 底部-->
+</body>
+</html>

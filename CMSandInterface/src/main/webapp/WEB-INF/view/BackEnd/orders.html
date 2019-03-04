@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+    <link rel="stylesheet" type="text/css" href="css/orderTable.css"/>
+    <script src="js/jquery.js"></script>
+    <style type="text/css">
+        th,td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">首页</a></li>
+                <li><a href="#" target="_blank">订餐首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="http://www.jscss.me">管理员</a></li>
+                <li><a href="http://www.jscss.me">修改密码</a></li>
+                <li><a href="http://www.jscss.me">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>订单相关</a>
+                    <ul class="sub-menu">
+                        <li><a href="Items.html"><i class="icon-font">&#xe008;</i>商品管理</a></li>
+                        <li><a href="foodMenu.html"><i class="icon-font">&#xe008;</i>标准菜谱</a></li>
+                        <li><a href="orders.html"><i class="icon-font">&#xe005;</i>确认订餐单</a></li>
+                        <li><a href="weekOrders.html"><i class="icon-font">&#xe012;</i>周订餐汇总</a></li>
+                        <li><a href="monthRefund.html"><i class="icon-font">&#xe006;</i>月总退餐表</a></li>
+                        <li><a href="statistics.html"><i class="icon-font">&#xe052;</i>数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>其他操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="deliveryMen.html"><i class="icon-font">&#xe017;</i>送餐员管理</a></li>
+                        <li><a href="customerAdvice.html"><i class="icon-font">&#xe004;</i>客户意见回复</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">商品管理</span></div>
+        </div>
+
+        <div class="result-wrap">
+                <div class="result-title">
+                    <div class="result-list">
+                        当前时间:  <span id="showTime" style="font-weight: bold;margin-right: 20px"></span>
+                        <a href="addItem.html"><i class="icon-font"></i>批量加入退餐表</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <div style="padding-left: 15%">
+                    <table border=0 cellpadding=0 cellspacing=0 width=893 style='border-collapse: collapse;table-layout:fixed;width:669pt'>
+                        <col class=x71 width=36 style='mso-width-source:userset;width:27pt'>
+                        <col class=x71 width=73 style='mso-width-source:userset;width:54pt'>
+                        <col class=x71 width=24 span=28 style='mso-width-source:userset;width:18pt'>
+                        <col class=x71 width=56 span=2 style='mso-width-source:userset;width:42pt'>
+                        <tr height=30 class=x69 style='mso-height-source:userset;height:23pt' id='r0'>
+                            <td colspan=32 id='tc0' height=30 class=x99 style='height:23pt;' ><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>每周订餐汇总表<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>班级</td>
+                        </tr>
+                        <tr height=17 class=x70 style='mso-height-source:userset;height:12.75pt' id='r1'>
+                            <td rowspan=3 height=51 class=x100 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;height:38.25pt;' >NO.</td>
+                            <td rowspan=3 height=51 class=x101 style='border-bottom:1px solid #A6A6A6;height:38.25pt;' >姓名</td>
+                            <td colspan=4 id='tc1' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 五</td>
+                            <td colspan=4 id='tc2' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 一</td>
+                            <td colspan=4 id='tc3' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 二</td>
+                            <td colspan=4 id='tc4' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 三</td>
+                            <td colspan=4 id='tc5' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 四</td>
+                            <td colspan=4 id='tc6' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >周 五</td>
+                            <td colspan=4 id='tc7' class=x102 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' ></td>
+                            <td rowspan=3 height=51 class=x103 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;height:38.25pt;overflow:hidden;' >合计<br>餐费</td>
+                            <td rowspan=3 height=51 class=x101 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;height:38.25pt;' >备注</td>
+                        </tr>
+                        <tr height=17 class=x70 style='mso-height-source:userset;height:12.75pt' id='r2'>
+                            <td colspan=2 id='tc8' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc9' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc10' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc11' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc12' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc13' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc14' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc15' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc16' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc17' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc18' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc19' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                            <td colspan=2 id='tc20' class=x104 style='border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >15元</td>
+                            <td colspan=2 id='tc21' class=x105 style='border-right:2px solid #A6A6A6;border-bottom:1px solid #A6A6A6;' >18元</td>
+                        </tr>
+                        <tr height=17 class=x70 style='mso-height-source:userset;height:12.75pt' id='r3'>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x83>晚</td>
+                            <td class=x83 style='mso-ignore:style;font-size:10pt;color:#006100;font-weight:400;text-decoration:none;text-line-through:none;font-family:"宋体";border-top:1px solid #A6A6A6;border-right:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;border-left:1px solid #A6A6A6;mso-diagonal-down:none;mso-diagonal-up:none;background:#F2F2F2;mso-pattern:auto none;' >午</td>
+                            <td class=x84>晚</td>
+                        </tr>
+
+                        <!--START 循环遍历-->
+                        <tr height=21 class=x71 style='mso-height-source:userset;height:16pt' id='r4'>
+                            <td height=21 class=x85 style='height:16pt;' >1</td>
+                            <td class=x86></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x87></td>
+                            <td class=x88></td>
+                            <td class=x85 x:fmla="=SUM(C5:AD5)">0</td>
+                            <td class=x87></td>
+                        </tr>
+                        <!--END 循环遍历-->
+                    </table>
+                </div>
+                    <!--分页按钮-->
+                    <div class="list-page">
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
+
+<!--客户端时间动态变化,会有bug，最好从服务器传个时间过来-->
+<script>
+    var t = null;
+    t = setTimeout(time,1);//開始运行
+    function time()
+    {
+        clearTimeout(t);//清除定时器
+        dt = new Date();
+        var h=dt.getHours();//获取时
+        var m=dt.getMinutes();//获取分
+        var s=dt.getSeconds();//获取秒
+        document.getElementById("showTime").innerHTML =h+':'+m+':'+s;
+        t = setTimeout(time,1000); //设定定时器，循环运行
+    }
+</script>
+
+<script>
+    //checkbox的全选与取消全选
+    $('#allChoose').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('.singleChoose').prop('checked', 'checked');
+        } else {
+            $('.singleChoose').prop('checked', '');
+        }
+    })
+</script>

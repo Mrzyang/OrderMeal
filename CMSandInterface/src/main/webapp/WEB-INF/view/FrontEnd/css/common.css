@@ -1,0 +1,48 @@
+.logo{
+    width: 50%;
+    position: relative;
+    top: -15px;
+}
+
+#todayMenu td,th{
+    text-align: center;
+    vertical-align: middle;
+}
+.smallImg{
+    padding: 0;
+    width: 150px;
+}
+
+.panel-footer{
+    text-align: center;
+    background-color: white;
+}
+
+.panel-footer ul{
+    display: inline-block;
+    margin-right: 65px;
+}
+.panel-footer ul li{
+    display: block;
+    margin-bottom: 17px;
+    list-style-type: none;
+    font: 12px/1.125 Microsoft Yahei,Arial,Helvetica,sans-serif;
+}
+
+.contactMe{
+    display: inline-block;
+    font: 12px/1.125 Microsoft Yahei,Arial,Helvetica,sans-serif;
+    margin-right: 65px;
+}
+.contactMe span{
+    font: 18px;
+}
+.beian{
+    background-color: #cccccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+}
+.refundRule{
+    font: 12px fangsong;
+}

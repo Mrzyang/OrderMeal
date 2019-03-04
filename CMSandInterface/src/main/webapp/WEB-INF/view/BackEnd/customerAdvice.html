@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">首页</a></li>
+                <li><a href="#" target="_blank">订餐首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="http://www.jscss.me">管理员</a></li>
+                <li><a href="http://www.jscss.me">修改密码</a></li>
+                <li><a href="http://www.jscss.me">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>订单相关</a>
+                    <ul class="sub-menu">
+                        <li><a href="Items.html"><i class="icon-font">&#xe008;</i>商品管理</a></li>
+                        <li><a href="foodMenu.html"><i class="icon-font">&#xe008;</i>标准菜谱</a></li>
+                        <li><a href="orders.html"><i class="icon-font">&#xe005;</i>确认订餐单</a></li>
+                        <li><a href="weekOrders.html"><i class="icon-font">&#xe012;</i>周订餐汇总</a></li>
+                        <li><a href="monthRefund.html"><i class="icon-font">&#xe006;</i>月总退餐表</a></li>
+                        <li><a href="statistics.html"><i class="icon-font">&#xe052;</i>数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>其他操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="deliveryMen.html"><i class="icon-font">&#xe017;</i>送餐员管理</a></li>
+                        <li><a href="customerAdvice.html"><i class="icon-font">&#xe004;</i>客户意见回复</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="insert.html"><i class="icon-font"></i>新增作品</a>
+                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>编号</th>
+                            <th>标题</th>
+                            <th>留言人</th>
+                            <th>编号</th>
+                            <th>更新时间</th>
+                            <th>处理状态</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                            <td>服务态度</td>
+                            <td>张三</td>
+                            <td>201513137016</td>
+                            <td>2018-03-15 21:11:01</td>
+                            <td>未处理</td>
+                            <td>
+                                <a class="link-update" href="MessageDetail.html">查看</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--分页按钮-->
+                    <div class="list-page">
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

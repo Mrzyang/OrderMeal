@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.js"> </script>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">首页</a></li>
+                <li><a href="#" target="_blank">网站首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="#">管理员</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>订单相关</a>
+                    <ul class="sub-menu">
+                        <li><a href="Items.html"><i class="icon-font">&#xe008;</i>商品管理</a></li>
+                        <li><a href="orders.html"><i class="icon-font">&#xe005;</i>确认订餐单</a></li>
+                        <li><a href="weekOrders.html"><i class="icon-font">&#xe012;</i>周订餐汇总</a></li>
+                        <li><a href="monthRefund.html"><i class="icon-font">&#xe006;</i>月总退餐表</a></li>
+                        <li><a href="statistics.html"><i class="icon-font">&#xe052;</i>数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>其他操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="deliveryMen.html"><i class="icon-font">&#xe017;</i>送餐员管理</a></li>
+                        <li><a href="customerAdvice.html"><i class="icon-font">&#xe004;</i>客户意见回复</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">商品管理</a><span class="crumb-step">&gt;</span><span>新增商品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <!--START 新增商品的表单-->
+                <form method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        <tr>
+                            <th><i class="require-red">*</i>名称：</th>
+                            <td>
+                                <input class="common-text required" id="title" name="title" size="50" value="" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="120"><i class="require-red">*</i>进餐时间：</th>
+                            <td>
+                                <select name="time" id="time" class="required">
+                                    <option value="">中晚都有</option>
+                                    <option value="19">中餐</option>
+                                    <option value="20">晚餐</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th width="120"><i class="require-red">*</i>价格：</th>
+                            <td>
+                                <select name="price" id="price" class="required">
+                                    <option value="">15元</option>
+                                    <option value="19">18元</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                            <tr>
+                                <th>描述：</th>
+                                <td><input class="common-text" name="description" size="50" type="text"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>缩略图：</th>
+                                <td>
+                                    <input type=file name="img" id="img" onchange="javascript:setImagePreview();">
+                                    <img id="preview" width=-1 height=-1 style="diplay:none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>详情：</th>
+                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <button class="btn btn-primary btn6 mr10">提交</button>
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+                <!--END 新增商品的表单-->
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
+
+
+
+<!--图片及时预览-->
+<script type="text/javascript">
+    function setImagePreview() {
+        var docObj = document.getElementById("img");
+        var imgObjPreview = document.getElementById("preview");
+        if (docObj.files && docObj.files[0]) {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '150px';
+            imgObjPreview.style.display="inline-block";
+            imgObjPreview.style.marginLeft="10px";
+            //imgObjPreview.style.height = '120px';
+            //imgObjPreview.src = docObj.files[0].getAsDataURL();
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        } else {
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+            //必须设置初始大小
+            localImagId.style.width = "50px";
+            //localImagId.style.height = "200px";
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try {
+                localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters
+                    .item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            } catch (e) {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+</script>
+
+<script type="text/javascript">
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('content');
+</script>

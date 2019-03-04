@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>订餐平台后台管理系统</title>
+    <link href="css/admin_login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="admin_login_wrap" style="position:relative;left: -50px">
+    <div style="font: 24px kaiti;text-align: center;width: 510px;margin-bottom: 30px">xxxx中学在线订餐平台</div>
+    <div class="adming_login_border" style="width: 510px">
+        <div class="QRcode" style="float: left;margin:30px 30px 0 30px">
+            <br><br>
+            <img src="images/QR-code.png" width="160px" alt="二维码"/>
+            <p style="font: 12px kaiti;text-align: center">扫描二维码关注微信公众号</p>
+        </div>
+        <div class="admin_input" style="float: left;">
+            <!-- START 登录表单   推荐使用ajax提交-->
+            <form action="index.html" method="post">
+                <ul class="admin_items">
+                    <li>
+                        <label for="user">学校：</label>
+                        <select type="text" name="school"  id="gradeClass" class="admin_input_style">
+                            <option value="">武汉一中</option>
+                            <option value="">武汉二中</option>
+                            <option value="">武汉三中</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="user">姓名：</label>
+                        <input type="text" name="username" value="admin" id="user" size="35" class="admin_input_style" />
+                    </li>
+                    <li>
+                        <label for="pwd">密码：</label>
+                        <input type="password" name="pwd" value="admin" id="pwd" size="35" class="admin_input_style" />
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-primary"  style="width: 262px">登录</button>
+                    </li>
+                </ul>
+            </form>
+            <!--END 登录表单-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

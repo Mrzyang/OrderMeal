@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <style type="text/css">
+        th,td{
+            text-align: center;
+        }
+        .message li {
+            list-style-type: none;
+            display: inline;
+            margin-left: 30px;
+        }
+        .messageContent{
+            margin: 5% 10% 0;
+            width:700px;
+            font: 15px kaiti;
+    </style>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">首页</a></li>
+                <li><a href="#" target="_blank">订餐首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="http://www.jscss.me">管理员</a></li>
+                <li><a href="http://www.jscss.me">修改密码</a></li>
+                <li><a href="http://www.jscss.me">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>订单相关</a>
+                    <ul class="sub-menu">
+                        <li><a href="Items.html"><i class="icon-font">&#xe008;</i>商品管理</a></li>
+                        <li><a href="foodMenu.html"><i class="icon-font">&#xe008;</i>标准菜谱</a></li>
+                        <li><a href="orders.html"><i class="icon-font">&#xe005;</i>确认订餐单</a></li>
+                        <li><a href="weekOrders.html"><i class="icon-font">&#xe012;</i>周订餐汇总</a></li>
+                        <li><a href="monthRefund.html"><i class="icon-font">&#xe006;</i>月总退餐表</a></li>
+                        <li><a href="statistics.html"><i class="icon-font">&#xe052;</i>数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>其他操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="deliveryMen.html"><i class="icon-font">&#xe017;</i>送餐员管理</a></li>
+                        <li><a href="customerAdvice.html"><i class="icon-font">&#xe004;</i>客户意见回复</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+
+        <div class="result-wrap">
+            <ul class="message">
+                <li>留言编号: 00101578</li>
+                <li>留言人: 张三</li>
+                <li>留言人编号:201513137001</li>
+                <li>留言时间: 2018-03-15 21:11:01</li>
+                <li>处理状态: 未处理</li>
+            </ul>
+                <div class="result-content">
+                    <div class="messageContent">
+                        <b>留言内容:</b> <br>
+                        11月份，学院按照（粤教后勤[2015]3号）精神，结合我院实际，制定了《惠州经济职业技术学院学生食堂陪餐制度》方案。实行学院领导干部陪餐制度，在陪餐过程中，领导们按制度要求，到学生食堂与学生一起排队、付费购餐吃饭，同学生一起吃饭，了解学生的一些想法，并认真地填写意见和建议。从陪餐登记表统计情况得知，大家对学生食堂的情况基本满意。个别领导对女生剩饭问题提出建议：改量改价。以及餐厅灯光较暗、饭菜保温等合理化建议。食堂负责人对学院领导的建议将加以整改。
+                        校领导陪餐制度加强学院领导与师生联系，深入基层了解学生日常生活状态，增进师生感情，师生一起来监督校园食品卫生安全、食堂管理，提高了食堂饭菜质量。
+                    </div>
+                    <div class="messageContent">
+                        <b>回复处理:</b> <br>
+                        <form action="">
+                            <textarea rows="6" cols="94">
+
+                            </textarea>
+                            <button class="btn btn-primary btn6 mr10">提交</button>
+                            <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
+
