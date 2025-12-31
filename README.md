@@ -29,3 +29,14 @@
 3. 项目地址：https://github.com/Mrzyang/OrderMeal
 4. 预览效果： 移动前端： http://zyang.top   后台CMS:  http://zyang.top:8080/admin/product  用户名和密码都是123456
 5. **项目备注**： 周一到周五显示本周菜单，周末显示下周菜单，发现选菜页面没有东西的同学注意啦！！！
+
+## 欢迎赞助：
+> 求打赏支持开源项目开发
+
+![image](https://github.com/Mrzyang/LibrarySystem/blob/master/src/main/webapp/assets/images/github/aw.jpg)
+
+    邮箱:   phpzy@foxmail.com  欢迎交流技术
+    本人大厂6年研发经验，接定制开发网站、app、微信小程序、毕业设计、学术论文
+    2018-4-14
+
+
